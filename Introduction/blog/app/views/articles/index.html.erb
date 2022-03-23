@@ -1,0 +1,28 @@
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<h1 style= "text-align:center">articles listing page</h1>
+
+<table class="table">
+  <thead class= "thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Created</th>
+      <th scope="col">Actions</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td><%= article.created_at %></th>
+        <td>Placeholder</td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
